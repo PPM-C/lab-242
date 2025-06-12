@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Formulario Pizza</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+    <div class="container">
+    <h1>🍕 Pedido de Pizza</h1>
+    <form action="#" method="post">
+
+        <label for="nombre"> Titulo</label>
+        <select 
+        id="titulo"
+        name="titulo"
+        required>
+            <option value="" disabled selected></option>
+            <option value="sr">Sr</option>
+            <option value="sra">Sra</option>
+            <option value="otro">Otro</option>
+        </select>
+
+        <label for="nombre"> Nombre</label>
+        <input 
+        type="text" 
+        id="nombre" 
+        name="nombre"
+        placeholder="Nombre"
+        required/>
+        
+        <label for="telefono"> Teléfono *</label>
+        <input 
+        type="tel" 
+        id="telefono"
+        name="telefono" 
+        placeholder="Ej: 600 200 100"
+        required/>
+
+        <label for="pizza"> Pizza *</label>
+        <select 
+        id="pizza"
+        name="pizza"
+        required>
+            <option value="" disabled selected>Elige tu pizza</option>
+            <option value="margarita">Margarita</option>
+            <option value="peperoni">Peperoni</option>
+            <option value="hawaiana">Hawaiana</option>
+            <option value="singluten">Sin Gluten</option>
+        </select>
+
+        <div class="extras">
+        <label> Ingredientes extra:</label><br>
+
+        <label>
+            <input 
+            type="checkbox" 
+            name="extras"
+            value="queso-extra">
+            Queso extra
+        </label>
+
+        <label>
+            <input 
+            type="checkbox" 
+            name="extras"
+            value="sinlactosa">
+            Queso sin lactosa
+        </label>
+
+        <label>
+            <input 
+            type="checkbox" 
+            name="extras"
+            value="cebolla">
+            Cebolla
+        </label>
+
+        <label>
+            <input 
+            type="checkbox" 
+            name="extras"
+            value="champiñones">
+            Champiñones
+        </label>
+        </div>
+
+        <div class="delivery">
+        <label> <h2>¿Domicilio o tienda?</h2></label><br>
+        <label>
+            <input 
+            type="radio"
+            name="modo" 
+            value="domicilio"
+            required> Enviar a casa
+        </label>
+
+        <label>
+            <input 
+            type="radio" 
+            name="modo" 
+            value="recoger"> Recoger en tienda</label>
+        </div>
+
+        <label for="comentario">Comentario adicional</label>
+        <textarea 
+            id="comentario" 
+            name="comentario"
+            maxlength="150"
+            placeholder="Máximo 150 caracteres">
+        </textarea>
+
+
+        <button type="submit">Realizar pedido</button>
+    </form>
+    </div>
+
+
+</body>
+</html>
